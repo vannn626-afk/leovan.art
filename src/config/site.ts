@@ -24,6 +24,8 @@ export const profile = {
   tagline: "CREATING BEYOND THE SCREEN.",
   secondaryTagline: "FROM CURIOSITY TO CREATION.",
   characterImage: "/assets/aistudio/Picsart_26-11-07_12-37-25-519_7283776c.png",
+  domain: "leovankt.web.id",
+  siteUrl: "https://leovankt.web.id",
   game: "Mobile Legends: Bang Bang",
   rank: "IMMORTAL",
   favoriteFood: "MIE AYAM",

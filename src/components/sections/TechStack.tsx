@@ -149,7 +149,7 @@ export function TechStack({ reducedMotion }: { reducedMotion: boolean }) {
 
           <div id="tech-panel" role="tabpanel" aria-labelledby={`tab-${cat.id}`}>
             <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8">
-              <AnimatePresence mode="wait">
+              <AnimatePresence>
                 {cat.items.map((t, i) => (
                   <TechCard key={`${cat.id}-${t.name}`} tech={t} index={i} category={cat.label} />
                 ))}

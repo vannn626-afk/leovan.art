@@ -1,9 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://leovan-3d-portfolio.netlify.app/</loc>
-    <lastmod>2026-11-06</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://leovankt.web.id/</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://leovankt.web.id/assets/aistudio/Picsart_26-11-07_12-37-25-519_7283776c.png</image:loc>
+      <image:title>LEOVAN — Mohammad Sofandi Avatar Persona</image:title>
+      <image:caption>LEOVAN (Mohammad Sofandi) Independent Web and App Developer</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://leovankt.web.id/#about</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://leovankt.web.id/#projects</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://leovankt.web.id/#tech</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://leovankt.web.id/#achievements</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://leovankt.web.id/#contact</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>

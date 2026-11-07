@@ -24,18 +24,25 @@ export function Hero({ ready, reducedMotion }: Props) {
         .from(".h-character", { xPercent: 40, autoAlpha: 0, scale: 0.92, duration: 0.9, ease: "expo.out" }, 0.65)
         .from(".h-fade", { y: 30, autoAlpha: 0, duration: 0.7, stagger: 0.08 }, 0.75)
         .from(".h-cta", { x: -60, autoAlpha: 0, duration: 0.6 }, 0.95);
+
+      if (ready) {
+        tl.play();
+      }
     }, root);
+
     // Failsafe: never leave the hero hidden
-    const failsafe = window.setTimeout(() => entrance.current?.play(), 8000);
+    const failsafe = window.setTimeout(() => entrance.current?.play(), 6000);
     return () => {
       window.clearTimeout(failsafe);
       ctx.revert();
       entrance.current = null;
     };
-  }, [reducedMotion]);
+  }, [reducedMotion, ready]);
 
   useEffect(() => {
-    if (ready) entrance.current?.play();
+    if (ready && entrance.current) {
+      entrance.current.play();
+    }
   }, [ready]);
 
   // Depth layers: pointer parallax + scroll parallax (scrubbed, reversible)

@@ -1,4 +1,35 @@
+# Robots.txt for LEOVAN Portfolio (https://leovankt.web.id)
 User-agent: *
 Allow: /
 
-Sitemap: https://leovan-3d-portfolio.netlify.app/sitemap.xml
+# Google Search & Google AI Overviews / Gemini
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Bing & Copilot
+User-agent: Bingbot
+Allow: /
+
+# OpenAI / ChatGPT Search
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Anthropic / Claude
+User-agent: ClaudeBot
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://leovankt.web.id/sitemap.xml
