@@ -7,7 +7,7 @@ import {
   siC, siCplusplus, siGo, siRust, siDart, siSwift, siReact, siNextdotjs, siVite,
   siTailwindcss, siBootstrap, siSass, siNodedotjs, siExpress, siLaravel, siFastapi,
   siMysql, siPostgresql, siMongodb, siFirebase, siSupabase, siRedis, siGit, siGithub,
-  siAndroidstudio, siVercel, siNetlify, siCloudflare, siFigma, siWhatsapp,
+  siAndroidstudio, siVercel, siNetlify, siCloudflare, siFigma, siWhatsapp, siDevdotto,
 } from "simple-icons";
 
 export type BrandIcon = { title: string; path: string; hex: string };
@@ -68,6 +68,14 @@ export const contact = {
       handle: "LEOVAN Channel",
       url: "https://whatsapp.com/channel/0029VbEFmPM6buMLQgdlie1J",
       icon: siWhatsapp as BrandIcon,
+    },
+    {
+      id: "devto",
+      label: "DEV.TO",
+      action: "BACA ARTIKEL",
+      handle: "leovankt",
+      url: "https://dev.to/leovankt",
+      icon: siDevdotto as BrandIcon,
     },
   ],
 };
