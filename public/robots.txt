@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://leovan-3d-portfolio.netlify.app/sitemap.xml

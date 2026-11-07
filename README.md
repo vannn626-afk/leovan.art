@@ -1,11 +1,20 @@
-<div align="center">
+# LEOVAN — 3D Developer Portfolio
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+A cinematic, red-black-white 3D portfolio for LEOVAN, an independent web & app developer from Sukagumiwang, Indramayu. The visual style draws on stylish game interfaces. All branding and assets are original.
 
-  <h1>Built with AI Studio</h2>
+## Tech
+React 19, Vite, TypeScript, Three.js, React Three Fiber, Drei, GSAP + ScrollTrigger, Framer Motion, Tailwind CSS v4, Lucide React and Simple Icons. Deployed on Netlify.
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+## Run locally
+```bash
+npm install
+npm run dev        # or: netlify dev --port 8889
+npm run typecheck
+```
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+## Editing content
+All profile, project, tech stack and contact data is in `src/config/site.ts`.
 
-</div>
+## Roadmap
+- Test the deployed build on real devices (mid-range Android, iOS) and tune 3D framing and timing.
+- Optional: replace the procedural geometry with optimized GLTF models.
