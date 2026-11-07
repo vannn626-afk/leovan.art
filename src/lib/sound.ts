@@ -3,7 +3,7 @@
  * No audio files are shipped — every sound is generated from oscillators
  * and filtered noise. Sound is OFF by default and persisted in localStorage.
  */
-type SoundName = "click" | "hover" | "transition" | "intro" | "success";
+export type SoundName = "click" | "hover" | "transition" | "intro" | "success" | "slash" | "card" | "persona";
 
 const STORAGE_KEY = "leovan:sound";
 let ctx: AudioContext | null = null;
@@ -40,7 +40,7 @@ export function setSoundEnabled(on: boolean) {
   }
   if (on) {
     audio();
-    play("click");
+    play("slash");
   }
   listeners.forEach((l) => l(on));
 }
@@ -116,6 +116,20 @@ export function play(name: SoundName) {
     case "success":
       tone(a, "triangle", 660, 660, 0.08, 0.05);
       tone(a, "triangle", 990, 990, 0.12, 0.05, 0.08);
+      break;
+    case "slash":
+      // Persona 5 style card/weapon slash sound
+      noise(a, 0.18, 0.09, 8000, 800);
+      tone(a, "sawtooth", 1400, 280, 0.15, 0.06);
+      break;
+    case "card":
+      tone(a, "sine", 950, 1200, 0.06, 0.05);
+      tone(a, "triangle", 440, 880, 0.08, 0.04, 0.02);
+      break;
+    case "persona":
+      tone(a, "sawtooth", 220, 440, 0.25, 0.06);
+      tone(a, "triangle", 554, 880, 0.35, 0.06, 0.08);
+      tone(a, "square", 1108, 1760, 0.4, 0.04, 0.16);
       break;
   }
 }

@@ -3,6 +3,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Backdrop } from "./components/Backdrop";
 import { Intro } from "./components/Intro";
 import { Nav } from "./components/Nav";
+import { PersonaNowPlaying } from "./components/AudioPlayer";
 import { Hero } from "./components/sections/Hero";
 import { About } from "./components/sections/About";
 import { TechStack } from "./components/sections/TechStack";
@@ -48,6 +49,7 @@ export default function App() {
       <Backdrop isMobile={isMobile} reducedMotion={reducedMotion} />
       {!introDone && <Intro onDone={onIntroDone} onReveal={onReveal} reducedMotion={reducedMotion} />}
       <Nav active={active} />
+      <PersonaNowPlaying />
       <main id="main" className="relative z-10 overflow-x-clip">
         <Hero ready={revealed} reducedMotion={reducedMotion} />
         <About reducedMotion={reducedMotion} />

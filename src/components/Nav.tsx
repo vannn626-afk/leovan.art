@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Cpu, FolderOpen, Home, Mail, Menu, Trophy, User, Volume2, VolumeX, X, type LucideIcon } from "lucide-react";
+import { Cpu, FolderOpen, Home, Mail, Menu, Trophy, User, X, type LucideIcon } from "lucide-react";
 import { sections, type SectionId } from "../config/site";
 import { Wordmark } from "./ui/Logo";
 import { play } from "../lib/sound";
-import { useSound } from "../hooks/useSound";
+import { AudioDeck } from "./AudioPlayer";
 
 const icons: Partial<Record<SectionId, LucideIcon>> = {
   home: Home,
@@ -22,25 +22,6 @@ export function scrollToSection(id: string) {
   if (!el) return;
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   el.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
-}
-
-function SoundToggle({ compact = false }: { compact?: boolean }) {
-  const [on, setOn] = useSound();
-  const Icon = on ? Volume2 : VolumeX;
-  return (
-    <button
-      type="button"
-      onClick={() => setOn(!on)}
-      aria-pressed={on}
-      aria-label={on ? "Matikan efek suara" : "Nyalakan efek suara"}
-      className={`clip-tag group inline-flex items-center gap-2 px-3 py-2 font-mono text-[10px] font-bold tracking-[0.25em] transition-colors ${
-        on ? "bg-blood text-paper" : "bg-white/10 text-ash hover:bg-paper hover:text-void"
-      }`}
-    >
-      <Icon className="h-4 w-4 transition-transform group-hover:scale-110" aria-hidden="true" />
-      {!compact && <span>SFX {on ? "ON" : "OFF"}</span>}
-    </button>
-  );
 }
 
 export function Nav({ active }: { active: SectionId }) {
@@ -63,7 +44,7 @@ export function Nav({ active }: { active: SectionId }) {
   }, [open]);
 
   const go = (id: string) => {
-    play("click");
+    play("slash");
     setOpen(false);
     // let the overlay close before scrolling on mobile
     window.setTimeout(() => scrollToSection(id), open ? 280 : 0);
@@ -136,7 +117,7 @@ export function Nav({ active }: { active: SectionId }) {
           </nav>
 
           <div className="flex items-center gap-2">
-            <SoundToggle compact />
+            <AudioDeck />
             <button
               type="button"
               className="clip-tag inline-flex h-11 w-14 items-center justify-center bg-blood text-paper lg:hidden"
@@ -240,7 +221,7 @@ export function Nav({ active }: { active: SectionId }) {
                 transition={{ delay: 0.5 }}
               >
                 <p className="font-mono text-[10px] tracking-[0.3em] text-ash">FROM CURIOSITY TO CREATION.</p>
-                <SoundToggle />
+                <AudioDeck compact showTrackInfo={false} />
               </motion.div>
             </div>
           </motion.div>

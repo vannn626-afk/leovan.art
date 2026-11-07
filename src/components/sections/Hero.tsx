@@ -193,7 +193,11 @@ export function Hero({ ready, reducedMotion }: Props) {
               </div>
 
               {/* Character Image with Persona 5 red shadow */}
-              <div className="relative overflow-visible">
+              <div
+                onClick={() => play("persona")}
+                className="relative overflow-visible cursor-pointer"
+                title="Klik untuk membangkitkan Persona SFX"
+              >
                 <img
                   src={profile.characterImage}
                   alt="LEOVAN Joker Persona Character"
