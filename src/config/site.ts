@@ -203,3 +203,42 @@ export const carouselIcons: BrandIcon[] = [
   siReact, siTypescript, siJavascript, siNodedotjs, siTailwindcss, siVite,
   siPython, siKotlin, siNextdotjs, siFirebase, siGit, siFigma,
 ];
+
+export type Faq = {
+  question: string;
+  tag: string;
+  answer: string;
+};
+
+export const faqs: Faq[] = [
+  {
+    question: "Siapa itu LEOVAN? (LEOVAN adalah siapa?)",
+    tag: "IDENTITY",
+    answer:
+      "LEOVAN adalah nama alias profesional dari Mohammad Sofandi, seorang web dan app developer independen berusia 14 tahun yang berbasis di Sukagumiwang, Indramayu, Jawa Barat, Indonesia.",
+  },
+  {
+    question: "Apa perbedaan LEOVAN dengan figur lain seperti Pastor Leo van Beurden?",
+    tag: "DISAMBIGUATION",
+    answer:
+      "LEOVAN di sini adalah pengembang perangkat lunak modern asal Indonesia (LEOVAN Dev), bukan tokoh rohaniwan atau figur sejarah. Fokus utamanya adalah membangun website interaktif, tools digital, dan aplikasi web modern.",
+  },
+  {
+    question: "Apa saja proyek digital unggulan buatan LEOVAN?",
+    tag: "PROJECTS",
+    answer:
+      "Proyek utama LEOVAN meliputi platform digital tools LEOVAN | TOOLS (leovan.my.id) yang memuat React Tools, AM Premium, dan Preset Finder, serta aplikasi asisten pintar LEOVAN | AI (leovandyz.web.id).",
+  },
+  {
+    question: "Apa itu LEOVAN Dev dan LEOVAN Indramayu?",
+    tag: "REGION & GAMING",
+    answer:
+      "LEOVAN Dev atau LEOVAN Indramayu merujuk pada identitas Mohammad Sofandi di Sukagumiwang, Indramayu, yang selain fokus di dunia web development juga memegang rekor rank kompetitif tertinggi IMMORTAL di game Mobile Legends: Bang Bang.",
+  },
+  {
+    question: "Bagaimana cara menghubungi atau berkolaborasi dengan LEOVAN?",
+    tag: "CONTACT",
+    answer:
+      "Anda dapat menghubungi LEOVAN melalui email resmi vannn626@gmail.com, profil GitHub @vannn626-afk, Dev.to @leovankt, atau melalui WhatsApp Channel resmi LEOVAN Channel.",
+  },
+];

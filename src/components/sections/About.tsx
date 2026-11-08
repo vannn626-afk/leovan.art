@@ -1,7 +1,10 @@
-import { useLayoutEffect, useRef } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
-import { profile, sections } from "../../config/site";
+import { AnimatePresence, motion } from "framer-motion";
+import { ChevronDown, HelpCircle } from "lucide-react";
+import { Faq, faqs, profile, sections } from "../../config/site";
 import { SectionHeading } from "../ui/SectionHeading";
+import { play } from "../../lib/sound";
 
 const info = [
   ["NAME", profile.name],
@@ -11,6 +14,62 @@ const info = [
   ["FOCUS", profile.focus],
   ["LOCATION", profile.locationShort],
 ] as const;
+
+function FaqAccordionItem({ faq, index }: { faq: Faq; index: number }) {
+  const [open, setOpen] = useState(index === 0);
+
+  return (
+    <article
+      className={`group relative border-2 transition-all duration-300 ${
+        open ? "border-blood bg-void/90 shadow-[6px_6px_0_#E60023]" : "border-paper/40 bg-void/60 hover:border-paper/80"
+      }`}
+    >
+      <button
+        type="button"
+        onClick={() => {
+          play("card");
+          setOpen((prev) => !prev);
+        }}
+        onMouseEnter={() => play("hover")}
+        aria-expanded={open}
+        className="flex w-full items-center justify-between gap-4 p-5 text-left md:p-6"
+      >
+        <div className="flex flex-col gap-1.5 sm:flex-row sm:items-center sm:gap-4">
+          <span className="font-mono text-[10px] font-bold tracking-[0.25em] text-blood">
+            {String(index + 1).padStart(2, "0")} // {faq.tag}
+          </span>
+          <h4 className="font-display text-lg tracking-wide text-paper group-hover:text-blood transition-colors md:text-xl">
+            {faq.question}
+          </h4>
+        </div>
+        <div
+          className={`flex h-8 w-8 shrink-0 items-center justify-center -skew-x-12 transition-transform duration-300 ${
+            open ? "rotate-180 bg-blood text-paper" : "bg-paper text-void group-hover:bg-blood group-hover:text-paper"
+          }`}
+          aria-hidden="true"
+        >
+          <ChevronDown className="h-5 w-5 skew-x-12" />
+        </div>
+      </button>
+
+      <AnimatePresence initial={false}>
+        {open && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
+            className="overflow-hidden"
+          >
+            <div className="border-t border-white/10 px-5 pb-6 pt-4 text-base leading-relaxed text-paper/85 md:px-6 md:text-lg">
+              <p>{faq.answer}</p>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </article>
+  );
+}
 
 export function About({ reducedMotion }: { reducedMotion: boolean }) {
   const root = useRef<HTMLElement>(null);
@@ -96,7 +155,34 @@ export function About({ reducedMotion }: { reducedMotion: boolean }) {
             </aside>
           </div>
         </div>
+
+        {/* Persona 5 Themed FAQ / Intel Dossier */}
+        <div className="mt-16 border-t-2 border-blood/50 pt-12 md:mt-24 md:pt-16" data-reveal>
+          <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <div className="flex items-center gap-2.5">
+                <HelpCircle className="h-4 w-4 text-blood" aria-hidden="true" />
+                <p className="font-mono text-xs font-bold tracking-[0.35em] text-blood">
+                  INTEL DOSSIER // FREQUENTLY ASKED
+                </p>
+              </div>
+              <h3 className="mt-2 font-display text-3xl tracking-wide text-paper md:text-5xl">
+                FAQ: PERTANYAAN UMUM
+              </h3>
+            </div>
+            <p className="font-mono text-xs tracking-[0.25em] text-ash">
+              KLARIFIKASI ENTITAS &amp; INFORMASI RESMI
+            </p>
+          </div>
+
+          <div className="grid gap-4 md:gap-5" role="region" aria-label="Pertanyaan yang sering diajukan">
+            {faqs.map((faq, i) => (
+              <FaqAccordionItem key={faq.question} faq={faq} index={i} />
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
 }
+
