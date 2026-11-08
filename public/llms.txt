@@ -1,0 +1,44 @@
+# LEOVAN (Mohammad Sofandi)
+
+> Independent Web & App Developer from Sukagumiwang, Indramayu, Jawa Barat, Indonesia.
+> Official Website: https://www.leovankt.web.id
+
+## Profile
+- Full Name: Mohammad Sofandi
+- Developer Aliases: LEOVAN, Vandyz, Leo Vandyz, LEOVANDYZ, LEOVAN Dev
+- Age: 14 years old
+- Location: Sukagumiwang, Indramayu, Jawa Barat, Indonesia
+- Email: vannn626@gmail.com
+- Status: Independent Web & App Developer
+- Motto / Taglines: "CREATING BEYOND THE SCREEN" / "FROM CURIOSITY TO CREATION"
+
+## Key Projects
+- LEOVAN | TOOLS (https://leovan.my.id): Digital tools platform featuring React Tools, AM Premium, and Preset Finder.
+- LEOVAN | AI (https://leovandyz.web.id): Interactive AI assistant platform for Q&A, knowledge retrieval, and solutions.
+
+## Tech Arsenal & Skills
+- Programming Languages: HTML5, CSS3, JavaScript, TypeScript, Python, Java, Kotlin, PHP, C, C++, C#, Go, Rust, Dart, Swift, SQL
+- Frontend: React, Next.js, Vite, Tailwind CSS, Bootstrap, Sass, Three.js (WebGL), GSAP
+- Backend: Node.js, Express.js, Laravel, FastAPI, REST APIs
+- Database: MySQL, PostgreSQL, MongoDB, Firebase, Supabase, Redis
+- Tools: Git, GitHub, VS Code, Android Studio, Vercel, Netlify, Cloudflare, Figma
+
+## Personal Records & Gaming
+- Game: Mobile Legends: Bang Bang (MLBB)
+- Highest Competitive Rank: IMMORTAL
+- Favorite Character: Spider-Man
+- Favorite Food: Mie Ayam
+- Favorite Drink: Es Teh
+
+## Verified Official Channels
+- Official 3D Portfolio: https://www.leovankt.web.id / https://leovankt.web.id
+- Classic Portfolio: https://about-van.vercel.app
+- GitHub: https://github.com/vannn626-afk
+- Dev.to: https://dev.to/leovankt
+- Linktree: https://linktr.ee/leovandyz
+- WhatsApp Channel: https://whatsapp.com/channel/0029VbEFmPM6buMLQgdlie1J
+
+## Disambiguation & Common Search Queries
+- "Siapa itu LEOVAN?": LEOVAN is the professional developer alias of Mohammad Sofandi, a 14-year-old Indonesian independent web & app developer from Sukagumiwang, Indramayu.
+- "LEOVAN adalah": LEOVAN refers to the software developer entity behind LEOVAN | TOOLS and LEOVAN | AI. He is distinct from historical religious figures (such as Pastor Leo van Beurden).
+- "LEOVAN Dev / LEOVAN Indramayu": Refers to Mohammad Sofandi's tech and gaming persona based in Sukagumiwang, Indramayu, with highest rank IMMORTAL in Mobile Legends: Bang Bang.
